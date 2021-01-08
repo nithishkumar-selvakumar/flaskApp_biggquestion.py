@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+<title>Home page</title>
+
+</head>
+<body>
+	{% block content%}
+	<center>
+	<h1>Big Questions</h1>
+	<p>welcome to our amaizing flask website!!</p>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXT7lDOr0NUEYT_vTJdlkwPVkWkhkCSawk9g&usqp=CAU">
+	<h2>what is the meaning of life?</h2>
+	<p>please put your comments below.</p>
+	<a class="btn btn-success" href="{{url_for('addcomments')}}" role="button">Add a Comments</a>
+	<br>
+	<br>
+	<br>
+<!--<p>{{user_data}}</p>-->
+
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">TITLE</th>
+      <th scope="col">COMMENTS</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for user in user_data %}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{user[0]}}</td>
+      <td>{{user[1]}}</td>
+      <td>{{user[2]}}</td>
+      <td>{{user[3]}}</td>
+    </tr>
+    {% endfor %}
+
+
+
+
+
+  </tbody>
+</table>
+	
+    </center>
+
+	{% endblock%}
+
+	<!-- <h1>Big Question welcomes you!!</h1>
+  	<p> we are going to discuss about difficult questions - see if you can answer them</p>
+  	<p>what is the meaning of life</p> -->

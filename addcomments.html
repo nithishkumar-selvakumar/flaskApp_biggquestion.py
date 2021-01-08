@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+
+</head>
+<body>
+	{% block content%}
+	<center>
+	<h1>Big Questions</h1>
+	<p>welcome to our amaizing flask website!!</p>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXT7lDOr0NUEYT_vTJdlkwPVkWkhkCSawk9g&usqp=CAU">
+	<h2>what is the meaning of life?</h2>
+	<p>please put your comments below.</p>
+	<a class="btn btn-success" href="" role="button">Add a Comments</a>
+	<br>
+
+<center>
+	<form action="http://127.0.0.1:5000/addcomments" method="post">
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="enter title">
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="enter your Name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Comments</label>
+    <input type="text" class="form-control" id="comments" name="comments" placeholder="say your oppninen">
+  </div>
+
+
+ 
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</center>
+	
+    </center>
+
+	{% endblock%}
